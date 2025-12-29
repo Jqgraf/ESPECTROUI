@@ -1,12 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>EspectroUI</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Generador de Colores - Espectro UI (convertido)</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<!-- Placeholder: full converted HTML content goes here -->
-<script src="script.js"></script>
+  <div id="app" class="min-h-screen">
+    <header class="header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo"><svg viewBox="0 0 20 20" class="logo-ico" aria-hidden="true"><path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM17 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4z" /></svg></div>
+          <h1 class="title">Generador de Colores Tailwind</h1>
+        </div>
+
+        <div class="header-actions">
+          <button id="btn-generate" class="btn dark-btn">Generar</button>
+          <button class="btn ghost">Mis paletas</button>
+          <button id="btn-accessibility" class="btn ghost">Accesibilidad</button>
+
+          <div class="theme-toggle">
+            <span class="muted small">Claro</span>
+            <label class="switch">
+              <input id="toggle-dark" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+            <span class="muted small">Oscuro</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container p-6">
+      <div class="grid">
+        <aside class="panel sidebar">
+          <section class="card">
+            <h2>Selección de Colores Base</h2>
+            <p class="muted">Crea instantáneamente escalas de colores personalizados eligiendo un color principal, secundario y neutral.</p>
+
+            <div class="field">
+              <label>Principal</label>
+              <div class="field-row">
+                <input id="mainColorPicker" type="color" class="color-picker" />
+                <input id="mainColorInput" type="text" class="text-input" />
+                <button id="swapColors" class="icon-btn" title="Intercambiar Principal y Secundario" aria-label="swap">⟷</button>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Secundario</label>
+              <div class="field-row">
+                <input id="secondary1Picker" type="color" class="color-picker" />
+                <input id="secondary1Input" type="text" class="text-input" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Neutral</label>
+              <div class="field-row">
+                <input id="secondary2Picker" type="color" class="color-picker" />
+                <input id="secondary2Input" type="text" class="text-input" />
+              </div>
+            </div>
+
+            <button id="btn-complement" class="btn full">Buscar color complementario</button>
+          </section>
+        </aside>
+
+        <section class="panel content">
+          <div class="card">
+            <h2>Paletas</h2>
+
+            <h3>Principal</h3>
+            <div id="mainPalette" class="palette"></div>
+
+            <h3>Secundario</h3>
+            <div id="secondaryPalette" class="palette"></div>
+
+            <h3>Neutral</h3>
+            <div id="neutralPalette" class="palette"></div>
+          </div>
+
+          <div class="card">
+            <h2>Ejemplos de componentes UI</h2>
+            <p class="muted">Selecciona un tipo de color para mostrar cómo se aplica en los ejemplos.</p>
+
+            <div class="palette-select">
+              <label><input type="radio" name="activePalette" value="principal" checked /> Principal <span class="swatch" id="sw-main"></span></label>
+              <label><input type="radio" name="activePalette" value="secundario" /> Secundario <span class="swatch" id="sw-sec"></span></label>
+              <label><input type="radio" name="activePalette" value="neutral" /> Neutral <span class="swatch" id="sw-neu"></span></label>
+            </div>
+
+            <div class="examples">
+              <div class="example card small">
+                <h4>Estados de botones</h4>
+                <div id="buttonsExample" class="btn-variants"></div>
+              </div>
+
+              <div class="example card small">
+                <button id="showNotice" class="notice-btn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM11 9h2v4h-2V9zm0 6h2v2h-2v-2z"/></svg> Porem ipsum dolor sit ame</button>
+
+                <div id="contrasts" class="contrasts"></div>
+              </div>
+
+              <div class="example card small">
+                <h4>En gráfico Pie</h4>
+                <div class="pie-row">
+                  <svg viewBox="0 0 100 100" class="pie" id="pieSvg">
+                    <!-- circles updated by JS -->
+                  </svg>
+                  <ul id="pieLegend" class="legend"></ul>
+                </div>
+              </div>
+
+              <div class="example card small">
+                <h4>Mensajería</h4>
+                <div class="message-sample">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="message-actions">
+                    <button class="link-like">👍 <strong>15 Like</strong></button>
+                    <button class="link-reply">💬 <strong>6 Replies</strong></button>
+                    <button class="link-more">⋯</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="color-notes">
+                <div class="note" id="note50"><h5>Color Principal</h5><p>Modelo de color de fondo en contraste 50</p></div>
+                <div class="note" id="note100"><h5>Color Principal</h5><p>Modelo de color de fondo en contraste 100</p></div>
+                <div class="note" id="note150"><h5>Color Principal</h5><p>Modelo de color de fondo en contraste 150</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content card">
+        <div class="modal-header">
+          <h3 id="modalTitle">Modal</h3>
+          <button id="closeModal" class="icon-btn">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-notice">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM11 9h2v4h-2V9zm0 6h2v2h-2v-2z"/></svg>
+            <div>
+              <h4>Porem ipsum dolor sit ame</h4>
+              <p>Porem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button id="modalBack" class="btn ghost">VOLVER</button>
+          <button id="modalAccept" class="btn" >ACEPTAR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accessibility Panel -->
+    <div id="accessPanel" class="overlay hidden">
+      <div class="access-panel card">
+        <div class="access-header">
+          <div>
+            <h2>Prueba la accesibilidad</h2>
+            <p class="muted">Asegúrate de que tus opciones de color sean lo más accesibles posible.</p>
+          </div>
+          <button id="closeAccess" class="icon-btn">✕</button>
+        </div>
+
+        <div class="access-body">
+          <div class="field">
+            <label>Color de texto</label>
+            <div class="field-row">
+              <input id="textColorPicker" type="color" class="color-picker" />
+              <input id="textColorInput" type="text" class="text-input" />
+            </div>
+          </div>
+
+          <div class="center">
+            <button id="swapAccess" class="icon-btn" title="Intercambiar color de texto y fondo">⟷</button>
+          </div>
+
+          <div class="field">
+            <label>Color de fondo</label>
+            <div class="field-row">
+              <input id="bgColorPicker" type="color" class="color-picker" />
+              <input id="bgColorInput" type="text" class="text-input" />
+            </div>
+          </div>
+
+          <div class="contrast-previews">
+            <div class="contrast-block">
+              <div class="contrast-row">
+                <p>Vista previa texto normal 16pt</p>
+                <span id="normalPass" class="badge"></span>
+              </div>
+              <div id="normalPreview" class="preview">Con un alto contraste de color todo es más fácil de leer.</div>
+            </div>
+
+            <div class="contrast-block">
+              <div class="contrast-row">
+                <p>Vista previa texto grande 18pt+</p>
+                <span id="largePass" class="badge"></span>
+              </div>
+              <div id="largePreview" class="preview large">Con un alto contraste de color todo es más fácil de leer.</div>
+            </div>
+
+            <div class="ratios">
+              <label><input id="show45" type="checkbox" checked /> Mostrar Ratio 4.5</label>
+              <label><input id="show7" type="checkbox" checked /> Mostrar Ratio 7.0</label>
+            </div>
+
+            <div class="contrast-result">
+              <div class="big-contrast" id="contrastValue">0.00 / 1</div>
+              <div id="ratioResults"></div>
+            </div>
+          </div>
+
+          <div class="right">
+            <button id="closeAccessBtn" class="btn">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
