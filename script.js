@@ -1,0 +1,1 @@
+// Placeholder: full converted JS logic including ESC/overlay close enhancements
