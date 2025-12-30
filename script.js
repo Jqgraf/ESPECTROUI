@@ -487,10 +487,10 @@ function updateContrastPreviews(){
 
   let html = '';
   if(state.showRatio45){
-    html += `<div>Ratio mínimo <strong>4.5</strong> → <strong style="color:${(ratio>=4.5)?'#16A34A':'#DC2626'}">${(ratio>=4.5)?'Pasa':'Falla'}</strong></div>`;
+    html += `<div>Ratio mínimo AA: <strong>4.5</strong> → <strong style="color:${(ratio>=4.5)?'#16A34A':'#DC2626'}">${(ratio>=4.5)?'Pasa':'Falla'}</strong></div>`;
   }
   if(state.showRatio7){
-    html += `<div>Ratio mínimo <strong>7.0</strong> → <strong style="color:${(ratio>=7)?'#16A34A':'#DC2626'}">${(ratio>=7)?'Pasa':'Falla'}</strong></div>`;
+    html += `<div>Ratio mínimo AAA: <strong>7.0</strong> → <strong style="color:${(ratio>=7)?'#16A34A':'#DC2626'}">${(ratio>=7)?'Pasa':'Falla'}</strong></div>`;
   }
   nodes.ratioResults.innerHTML = html;
 }
