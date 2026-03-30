@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Generador de Colores - Espectro UI (convertido)</title>
+  <title>Espectro UI — Generador de Paletas de Color</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="app" class="min-h-screen">
+
+    <!-- ══ HEADER ══════════════════════════════════════════════════ -->
     <header class="header">
       <div class="container header-inner">
         <div class="brand">
           <div class="logo">
-            <!-- SVG del logotipo insertado -->
             <svg class="logo-ico" role="img" aria-label="Logotipo Espectro" focusable="false" viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
               <title>Espectro Logo</title>
               <path d="M26.5349 46.6694H0V11.134C0 7.8449 1.0445 5.2003 3.13351 3.20019C4.55582 1.86678 6.15591 1.00006 7.93379 0.600035C9.71167 0.200012 11.8896 0 14.4675 0H26.5349V5.86701H13.6008C8.71162 5.86701 6.26703 7.91157 6.26703 12.0007V19.6011H21.6679V25.4681H6.26703V40.8024H26.5349V46.6694Z" fill="#2C3E50"/>
@@ -24,40 +25,23 @@
               <path d="M209.96 18.8678C213.071 15.6231 216.96 14.0008 221.627 14.0008C223.894 14.0008 226.005 14.4453 227.961 15.3342C229.961 16.1787 231.695 17.3566 233.161 18.8678C234.673 20.379 235.85 22.1568 236.695 24.2014C237.539 26.2015 237.962 28.3572 237.962 30.6684C237.962 32.9797 237.539 35.1576 236.695 37.2022C235.895 39.2023 234.762 40.9579 233.295 42.4691C231.828 43.9803 230.095 45.1804 228.094 46.0693C226.094 46.9138 223.939 47.3361 221.627 47.3361C219.272 47.3361 217.094 46.9138 215.094 46.0693C213.138 45.1804 211.427 43.9803 209.96 42.4691C208.493 40.9579 207.338 39.2023 206.493 37.2022C205.693 35.1576 205.293 32.9797 205.293 30.6684C205.293 25.9571 206.849 22.0235 209.96 18.8678ZM221.627 19.6011C218.516 19.6011 216.005 20.6234 214.094 22.668C212.227 24.7125 211.293 27.3794 211.293 30.6684C211.293 33.9575 212.227 36.6243 214.094 38.6689C216.005 40.7135 218.516 41.7358 221.627 41.7358C224.783 41.7358 227.294 40.7135 229.161 38.6689C231.028 36.5799 231.961 33.9131 231.961 30.6684C231.961 27.4238 231.028 24.7792 229.161 22.7347C227.294 20.6456 224.783 19.6011 221.627 19.6011Z" fill="#2C3E50"/>
               <path d="M279.463 0H285.73V32.0019C285.73 37.291 284.352 41.1802 281.596 43.6692C278.885 46.1138 274.773 47.3361 269.262 47.3361C263.751 47.3361 259.639 46.1138 256.928 43.6692C254.217 41.1802 252.861 37.291 252.861 32.0019V0H259.128V32.8686C259.128 35.891 260.039 38.0911 261.862 39.469C263.728 40.8024 266.173 41.4691 269.195 41.4691C272.307 41.4691 274.796 40.8024 276.662 39.469C278.529 38.0911 279.463 35.891 279.463 32.8686V0Z" fill="#2C3E50"/>
               <path d="M297 46.6694H290.733V0H297V46.6694Z" fill="#2C3E50"/>
-              <mask id="path-2-inside-1_679_1901" fill="white">
-                <path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141C123.422 22.7324 124.899 17.8626 127.667 13.7205C130.434 9.57844 134.368 6.35007 138.971 4.44367C143.573 2.53727 148.638 2.03847 153.523 3.01034C158.409 3.98221 162.897 6.38111 166.42 9.90367L155.513 20.811C154.147 19.4457 152.408 18.516 150.514 18.1393C148.62 17.7626 146.658 17.9559 144.874 18.6948C143.09 19.4337 141.565 20.685 140.492 22.2904C139.42 23.8958 138.847 25.7833 138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z"/>
-              </mask>
-              <path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141C123.422 22.7324 124.899 17.8626 127.667 13.7205C130.434 9.57844 134.368 6.35007 138.971 4.44367C143.573 2.53727 148.638 2.03847 153.523 3.01034C158.409 3.98221 162.897 6.38111 166.42 9.90367L155.513 20.811C154.147 19.4457 152.408 18.516 150.514 18.1393C148.62 17.7626 146.658 17.9559 144.874 18.6948C143.09 19.4337 141.565 20.685 140.492 22.2904C139.42 23.8958 138.847 25.7833 138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z" stroke="#9D3593" stroke-width="20.7827" mask="url(#path-2-inside-1_679_1901)"/>
-              <mask id="path-3-inside-2_679_1901" fill="white">
-                <path d="M166.42 45.5245C163.491 48.4534 159.885 50.6148 155.921 51.8172C151.957 53.0196 147.758 53.2259 143.696 52.4178C139.633 51.6097 135.833 49.8122 132.631 47.1844C129.429 44.5567 126.924 41.1798 125.339 37.353C123.754 33.5261 123.137 29.3674 123.543 25.2452C123.949 21.123 125.366 17.1646 127.667 13.7205C129.968 10.2765 133.083 7.45309 136.736 5.5005C140.389 3.54791 144.467 2.52637 148.61 2.52637L148.61 17.9517C147.004 17.9517 145.423 18.3476 144.008 19.1044C142.592 19.8612 141.384 20.9555 140.492 22.2904C139.601 23.6252 139.052 25.1595 138.894 26.7572C138.737 28.3549 138.976 29.9667 139.59 31.45C140.205 32.9332 141.175 34.242 142.416 35.2605C143.657 36.279 145.13 36.9757 146.705 37.2889C148.28 37.6021 149.907 37.5221 151.443 37.0561C152.98 36.5901 154.377 35.7523 155.513 34.6171L166.42 45.5245Z"/>
-              </mask>
-              <path d="M166.42 45.5245C163.491 48.4534 159.885 50.6148 155.921 51.8172C151.957 53.0196 147.758 53.2259 143.696 52.4178C139.633 51.6097 135.833 49.8122 132.631 47.1844C129.429 44.5567 126.924 41.1798 125.339 37.353C123.754 33.5261 123.137 29.3674 123.543 25.2452C123.949 21.123 125.366 17.1646 127.667 13.7205C129.968 10.2765 133.083 7.45309 136.736 5.5005C140.389 3.54791 144.467 2.52637 148.61 2.52637L148.61 17.9517C147.004 17.9517 145.423 18.3476 144.008 19.1044C142.592 19.8612 141.384 20.9555 140.492 22.2904C139.601 23.6252 139.052 25.1595 138.894 26.7572C138.737 28.3549 138.976 29.9667 139.59 31.45C140.205 32.9332 141.175 34.242 142.416 35.2605C143.657 36.279 145.13 36.9757 146.705 37.2889C148.28 37.6021 149.907 37.5221 151.443 37.0561C152.98 36.5901 154.377 35.7523 155.513 34.6171L166.42 45.5245Z" stroke="#2E51B9" stroke-width="20.7827" mask="url(#path-3-inside-2_679_1901)"/>
-              <mask id="path-4-inside-3_679_1901" fill="white">
-                <path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018C145.302 52.9018 142.027 52.2503 138.971 50.9845C135.915 49.7187 133.138 47.8634 130.799 45.5245C128.46 43.1856 126.605 40.4089 125.339 37.353C124.073 34.2971 123.422 31.0218 123.422 27.7141C123.422 24.4064 124.073 21.1311 125.339 18.0751C126.605 15.0192 128.46 12.2426 130.799 9.90367L141.707 20.811C140.8 21.7175 140.081 22.7937 139.59 23.9782C139.1 25.1626 138.847 26.4321 138.847 27.7141C138.847 28.9961 139.1 30.2655 139.59 31.45C140.081 32.6344 140.8 33.7106 141.707 34.6171C142.613 35.5236 143.689 36.2427 144.874 36.7333C146.058 37.2239 147.328 37.4764 148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z"/>
-              </mask>
-              <path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018C145.302 52.9018 142.027 52.2503 138.971 50.9845C135.915 49.7187 133.138 47.8634 130.799 45.5245C128.46 43.1856 126.605 40.4089 125.339 37.353C124.073 34.2971 123.422 31.0218 123.422 27.7141C123.422 24.4064 124.073 21.1311 125.339 18.0751C126.605 15.0192 128.46 12.2426 130.799 9.90367L141.707 20.811C140.8 21.7175 140.081 22.7937 139.59 23.9782C139.1 25.1626 138.847 26.4321 138.847 27.7141C138.847 28.9961 139.1 30.2655 139.59 31.45C140.081 32.6344 140.8 33.7106 141.707 34.6171C142.613 35.5236 143.689 36.2427 144.874 36.7333C146.058 37.2239 147.328 37.4764 148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z" stroke="#0D88C4" stroke-width="20.7827" mask="url(#path-4-inside-3_679_1901)"/>
-              <mask id="path-5-inside-4_679_1901" fill="white">
-                <path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141L138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z"/>
-              </mask>
-              <path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141L138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z" stroke="#32AB8C" stroke-width="20.7827" mask="url(#path-5-inside-4_679_1901)"/>
-              <mask id="path-6-inside-5_679_1901" fill="white">
-                <path d="M166.42 45.5245C161.696 50.2481 155.29 52.9018 148.61 52.9018C141.929 52.9018 135.523 50.2481 130.799 45.5245L141.707 34.6171C143.537 36.4479 146.02 37.4764 148.61 37.4764C151.199 37.4764 153.682 36.4479 155.513 34.6171L166.42 45.5245Z"/>
-              </mask>
-              <path d="M166.42 45.5245C161.696 50.2481 155.29 52.9018 148.61 52.9018C141.929 52.9018 135.523 50.2481 130.799 45.5245L141.707 34.6171C143.537 36.4479 146.02 37.4764 148.61 37.4764C151.199 37.4764 153.682 36.4479 155.513 34.6171L166.42 45.5245Z" stroke="#EEA528" stroke-width="20.7827" mask="url(#path-6-inside-5_679_1901)"/>
-              <mask id="path-7-inside-6_679_1901" fill="white">
-                <path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018L148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z"/>
-              </mask>
-              <path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018L148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z" stroke="#F05235" stroke-width="20.7827" mask="url(#path-7-inside-6_679_1901)"/>
+              <mask id="m1" fill="white"><path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141C123.422 22.7324 124.899 17.8626 127.667 13.7205C130.434 9.57844 134.368 6.35007 138.971 4.44367C143.573 2.53727 148.638 2.03847 153.523 3.01034C158.409 3.98221 162.897 6.38111 166.42 9.90367L155.513 20.811C154.147 19.4457 152.408 18.516 150.514 18.1393C148.62 17.7626 146.658 17.9559 144.874 18.6948C143.09 19.4337 141.565 20.685 140.492 22.2904C139.42 23.8958 138.847 25.7833 138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z"/></mask>
+              <path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141C123.422 22.7324 124.899 17.8626 127.667 13.7205C130.434 9.57844 134.368 6.35007 138.971 4.44367C143.573 2.53727 148.638 2.03847 153.523 3.01034C158.409 3.98221 162.897 6.38111 166.42 9.90367L155.513 20.811C154.147 19.4457 152.408 18.516 150.514 18.1393C148.62 17.7626 146.658 17.9559 144.874 18.6948C143.09 19.4337 141.565 20.685 140.492 22.2904C139.42 23.8958 138.847 25.7833 138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z" stroke="#9D3593" stroke-width="20.7827" mask="url(#m1)"/>
+              <mask id="m2" fill="white"><path d="M166.42 45.5245C163.491 48.4534 159.885 50.6148 155.921 51.8172C151.957 53.0196 147.758 53.2259 143.696 52.4178C139.633 51.6097 135.833 49.8122 132.631 47.1844C129.429 44.5567 126.924 41.1798 125.339 37.353C123.754 33.5261 123.137 29.3674 123.543 25.2452C123.949 21.123 125.366 17.1646 127.667 13.7205C129.968 10.2765 133.083 7.45309 136.736 5.5005C140.389 3.54791 144.467 2.52637 148.61 2.52637L148.61 17.9517C147.004 17.9517 145.423 18.3476 144.008 19.1044C142.592 19.8612 141.384 20.9555 140.492 22.2904C139.601 23.6252 139.052 25.1595 138.894 26.7572C138.737 28.3549 138.976 29.9667 139.59 31.45C140.205 32.9332 141.175 34.242 142.416 35.2605C143.657 36.279 145.13 36.9757 146.705 37.2889C148.28 37.6021 149.907 37.5221 151.443 37.0561C152.98 36.5901 154.377 35.7523 155.513 34.6171L166.42 45.5245Z"/></mask>
+              <path d="M166.42 45.5245C163.491 48.4534 159.885 50.6148 155.921 51.8172C151.957 53.0196 147.758 53.2259 143.696 52.4178C139.633 51.6097 135.833 49.8122 132.631 47.1844C129.429 44.5567 126.924 41.1798 125.339 37.353C123.754 33.5261 123.137 29.3674 123.543 25.2452C123.949 21.123 125.366 17.1646 127.667 13.7205C129.968 10.2765 133.083 7.45309 136.736 5.5005C140.389 3.54791 144.467 2.52637 148.61 2.52637L148.61 17.9517C147.004 17.9517 145.423 18.3476 144.008 19.1044C142.592 19.8612 141.384 20.9555 140.492 22.2904C139.601 23.6252 139.052 25.1595 138.894 26.7572C138.737 28.3549 138.976 29.9667 139.59 31.45C140.205 32.9332 141.175 34.242 142.416 35.2605C143.657 36.279 145.13 36.9757 146.705 37.2889C148.28 37.6021 149.907 37.5221 151.443 37.0561C152.98 36.5901 154.377 35.7523 155.513 34.6171L166.42 45.5245Z" stroke="#2E51B9" stroke-width="20.7827" mask="url(#m2)"/>
+              <mask id="m3" fill="white"><path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018C145.302 52.9018 142.027 52.2503 138.971 50.9845C135.915 49.7187 133.138 47.8634 130.799 45.5245C128.46 43.1856 126.605 40.4089 125.339 37.353C124.073 34.2971 123.422 31.0218 123.422 27.7141C123.422 24.4064 124.073 21.1311 125.339 18.0751C126.605 15.0192 128.46 12.2426 130.799 9.90367L141.707 20.811C140.8 21.7175 140.081 22.7937 139.59 23.9782C139.1 25.1626 138.847 26.4321 138.847 27.7141C138.847 28.9961 139.1 30.2655 139.59 31.45C140.081 32.6344 140.8 33.7106 141.707 34.6171C142.613 35.5236 143.689 36.2427 144.874 36.7333C146.058 37.2239 147.328 37.4764 148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z"/></mask>
+              <path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018C145.302 52.9018 142.027 52.2503 138.971 50.9845C135.915 49.7187 133.138 47.8634 130.799 45.5245C128.46 43.1856 126.605 40.4089 125.339 37.353C124.073 34.2971 123.422 31.0218 123.422 27.7141C123.422 24.4064 124.073 21.1311 125.339 18.0751C126.605 15.0192 128.46 12.2426 130.799 9.90367L141.707 20.811C140.8 21.7175 140.081 22.7937 139.59 23.9782C139.1 25.1626 138.847 26.4321 138.847 27.7141C138.847 28.9961 139.1 30.2655 139.59 31.45C140.081 32.6344 140.8 33.7106 141.707 34.6171C142.613 35.5236 143.689 36.2427 144.874 36.7333C146.058 37.2239 147.328 37.4764 148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z" stroke="#0D88C4" stroke-width="20.7827" mask="url(#m3)"/>
+              <mask id="m4" fill="white"><path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141L138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z"/></mask>
+              <path d="M166.42 45.5245C162.897 49.047 158.409 51.4459 153.523 52.4178C148.638 53.3897 143.573 52.8909 138.971 50.9845C134.368 49.0781 130.434 45.8497 127.667 41.7076C124.899 37.5655 123.422 32.6957 123.422 27.7141L138.847 27.7141C138.847 29.6449 139.42 31.5323 140.492 33.1378C141.565 34.7432 143.09 35.9944 144.874 36.7333C146.658 37.4722 148.62 37.6656 150.514 37.2889C152.408 36.9122 154.147 35.9824 155.513 34.6171L166.42 45.5245Z" stroke="#32AB8C" stroke-width="20.7827" mask="url(#m4)"/>
+              <mask id="m5" fill="white"><path d="M166.42 45.5245C161.696 50.2481 155.29 52.9018 148.61 52.9018C141.929 52.9018 135.523 50.2481 130.799 45.5245L141.707 34.6171C143.537 36.4479 146.02 37.4764 148.61 37.4764C151.199 37.4764 153.682 36.4479 155.513 34.6171L166.42 45.5245Z"/></mask>
+              <path d="M166.42 45.5245C161.696 50.2481 155.29 52.9018 148.61 52.9018C141.929 52.9018 135.523 50.2481 130.799 45.5245L141.707 34.6171C143.537 36.4479 146.02 37.4764 148.61 37.4764C151.199 37.4764 153.682 36.4479 155.513 34.6171L166.42 45.5245Z" stroke="#EEA528" stroke-width="20.7827" mask="url(#m5)"/>
+              <mask id="m6" fill="white"><path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018L148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z"/></mask>
+              <path d="M166.42 45.5245C164.081 47.8634 161.304 49.7187 158.248 50.9845C155.193 52.2503 151.917 52.9018 148.61 52.9018L148.61 37.4764C149.892 37.4764 151.161 37.2239 152.345 36.7333C153.53 36.2427 154.606 35.5236 155.513 34.6171L166.42 45.5245Z" stroke="#F05235" stroke-width="20.7827" mask="url(#m6)"/>
             </svg>
           </div>
-          <h1 class="title">Diseña para todos, crea sin límites</h1>
+          <h1 class="title">Diseña para todos, crea sin límites - By Albama</h1>
         </div>
-
         <div class="header-actions">
-          <button id="btn-generate" class="btn dark-btn">Generar</button>
-          <!--<button class="btn ghost">Mis paletas</button> -->
-          <button id="btn-accessibility" class="btn ghost">Accesibilidad</button>
-
           <div class="theme-toggle">
             <span class="muted small">Claro</span>
             <label class="switch">
@@ -70,27 +54,33 @@
       </div>
     </header>
 
+    <!-- ══ MAIN ═════════════════════════════════════════════════════ -->
     <main class="container p-6">
       <div class="grid">
+
+        <!-- ── SIDEBAR ── -->
         <aside class="panel sidebar">
           <section class="card">
-            <h2>Selección de Colores Base</h2>
-            <p class="muted">Crea instantáneamente escalas de colores personalizados eligiendo un color principal, secundario y neutral. Use el ícono del gotero o selector de color si desea identificar el código de color de alguna ventana activa</p>
+            <h2>Colores Base</h2>
+            <p class="muted small">Elige un color principal, secundario y neutral para generar tus escalas.</p>
 
             <div class="field">
               <label>Principal</label>
               <div class="field-row">
                 <input id="mainColorPicker" type="color" class="color-picker" />
-                <input id="mainColorInput" type="text" class="text-input" />
-                <button id="swapColors" class="icon-btn" title="Intercambiar Principal y Secundario" aria-label="swap">⟷</button>
-              </div>
+                <input id="mainColorInput"  type="text"  class="text-input" placeholder="#dd1389" />
+			  </div>
+            </div>	
+				
+			<div class="center">	
+                <button id="swapColors" class="icon-btn" title="Intercambiar Principal ↔ Secundario" aria-label="Intercambiar">⇅</button>
             </div>
 
             <div class="field">
               <label>Secundario</label>
               <div class="field-row">
                 <input id="secondary1Picker" type="color" class="color-picker" />
-                <input id="secondary1Input" type="text" class="text-input" />
+                <input id="secondary1Input"  type="text"  class="text-input" placeholder="#266bd9" />
               </div>
             </div>
 
@@ -98,31 +88,43 @@
               <label>Neutral</label>
               <div class="field-row">
                 <input id="secondary2Picker" type="color" class="color-picker" />
-                <input id="secondary2Input" type="text" class="text-input" />
+                <input id="secondary2Input"  type="text"  class="text-input" placeholder="#747c86" />
               </div>
             </div>
-<br><br>
-            <button id="btn-complement" class="btn full">Buscar color complementario</button>
+
+            <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px;">
+              <button id="btn-complement" class="btn full">🔄 Color complementario</button>
+              <button id="btn-export"     class="btn full" style="background:var(--muted)">⬇ Exportar paleta</button>
+            </div>
           </section>
         </aside>
 
+        <!-- ── CONTENT con TABS ── -->
         <section class="panel content">
-          <div class="card">
-            <h2>Paletas</h2>
 
-            <h3>Principal</h3>
+          <!-- Tab bar -->
+          <div class="tab-bar card" style="margin-bottom:0;border-radius:10px 10px 0 0;padding:4px 8px;">
+            <button class="tab-btn active" data-tab="paletas">🎨 Paletas</button>
+            <button class="tab-btn" data-tab="ejemplos">🧩 Ejemplos UI</button>
+            <button class="tab-btn" data-tab="accesibilidad">♿ Accesibilidad</button>
+            <button class="tab-btn" data-tab="armonias">⬡ Armonías</button>
+          </div>
+
+          <!-- ╔═ TAB: PALETAS ═══════════════════════════════════════╗ -->
+          <div id="tab-paletas" class="tab-panel card" style="border-radius:0 0 10px 10px;margin-top:0;">
+            <h3>Principal <span class="muted small" style="font-weight:400;font-size:13px">— haz clic en un color para copiarlo</span></h3>
             <div id="mainPalette" class="palette"></div>
 
-            <h3>Secundario</h3>
+            <h3 style="margin-top:20px">Secundario</h3>
             <div id="secondaryPalette" class="palette"></div>
 
-            <h3>Neutral</h3>
+            <h3 style="margin-top:20px">Neutral</h3>
             <div id="neutralPalette" class="palette"></div>
           </div>
 
-          <div class="card">
-            <h2>Ejemplos de componentes UI</h2>
-            <p class="muted">Selecciona un tipo de color para mostrar cómo se aplica en los ejemplos.</p>
+          <!-- ╔═ TAB: EJEMPLOS UI ═══════════════════════════════════╗ -->
+          <div id="tab-ejemplos" class="tab-panel card hidden" style="border-radius:0 0 10px 10px;margin-top:0;">
+            <p class="muted" style="margin-bottom:14px">Selecciona una paleta para ver cómo se aplica en los componentes.</p>
 
             <div class="palette-select">
               <label><input type="radio" name="activePalette" value="principal" checked /> Principal <span class="swatch" id="sw-main"></span></label>
@@ -131,200 +133,139 @@
             </div>
 
             <div class="examples">
-              <div class="example card small">
+              <div class="example card-inner">
                 <h4>Estados de botones</h4>
                 <div id="buttonsExample" class="btn-variants"></div>
               </div>
 
-              <div class="example card small">
-                <!-- SVG simplificado del icono -->
-                <button id="showNotice" class="notice-btn" aria-haspopup="dialog">
-                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2" fill="currentColor"></rect>
-                  </svg>
-                </button>
-
+              <div class="example card-inner">
+                <h4>Listas con contraste</h4>
                 <div id="contrasts" class="contrasts"></div>
               </div>
 
-              <div class="example card small">
-                <h4>En gráfico Pie</h4>
+              <div class="example card-inner">
+                <h4>Gráfico de distribución</h4>
                 <div class="pie-row">
-                  <svg viewBox="0 0 100 100" class="pie" id="pieSvg" width="150" height="150">
-                    <!-- círculos de ejemplo (serán actualizados por JS) -->
-                    <circle cx="50" cy="50" r="40" fill="#eee"></circle>
-                  </svg>
+                  <svg viewBox="0 0 100 100" class="pie" id="pieSvg" width="120" height="120"></svg>
                   <ul id="pieLegend" class="legend"></ul>
                 </div>
               </div>
 
-              <div class="example card small">
+              <div class="example card-inner">
                 <h4>Mensajería</h4>
                 <div class="message-sample">
-                  <p>Una buena selección de colores y contraste mejora la legibilidad y la navegación, haciendo que la información sea clara y accesible para todos los usuarios. Esto reduce la fatiga visual, facilita la comprensión y crea una experiencia más inclusiva y agradable.</p>
+                  <p>Una buena selección de colores mejora la legibilidad y la navegación, haciendo la información más accesible para todos los usuarios.</p>
                   <div class="message-actions">
-                    <button class="link-like">👍 <strong>15 Me Gusta</strong></button>
-                    <button class="link-reply">💬 <strong>6 Comentarios</strong></button>
+                    <button class="link-like">👍 <strong>15</strong></button>
+                    <button class="link-reply">💬 <strong>6</strong></button>
                     <button class="link-more">⋯</button>
                   </div>
                 </div>
               </div>
- 
-         <!--      <div class="color-notes">
-                <div class="note" id="note50"><h5>Opción 1 </h5><p>Modelo de color de fondo en contraste 50</p></div>
-                <div class="note" id="note100"><h5>Opción 2 </h5><p>Modelo de color de fondo en contraste 100</p></div>
-                <div class="note" id="note150"><h5>Opción 3 </h5><p>Modelo de color de fondo en contraste 150</p></div>
-              </div>  -->
-
-				
             </div>
           </div>
+
+          <!-- ╔═ TAB: ACCESIBILIDAD ═════════════════════════════════╗ -->
+          <div id="tab-accesibilidad" class="tab-panel card hidden" style="border-radius:0 0 10px 10px;margin-top:0;">
+            <p class="muted" style="margin-bottom:18px">Verifica que tus combinaciones de color cumplan las pautas WCAG 2.1.</p>
+
+            <div class="access-grid">
+              <!-- Controles -->
+              <div class="access-controls">
+                <div class="field">
+                  <label>Color de texto</label>
+                  <div class="field-row">
+                    <input id="textColorPicker" type="color" class="color-picker" />
+                    <input id="textColorInput"  type="text"  class="text-input" />
+                  </div>
+                </div>
+                <div class="center" style="margin:8px 0">
+                  <button id="swapAccess" class="icon-btn" title="Intercambiar texto y fondo">⇅</button>
+                </div>
+                <div class="field">
+                  <label>Color de fondo</label>
+                  <div class="field-row">
+                    <input id="bgColorPicker" type="color" class="color-picker" />
+                    <input id="bgColorInput"  type="text"  class="text-input" />
+                  </div>
+                </div>
+
+                <div class="contrast-result" style="margin-top:20px;">
+                  <div class="ratio-display">
+                    <span class="big-contrast" id="contrastValue">—</span>
+                    <span class="muted small">ratio de contraste</span>
+                  </div>
+                  <div id="wcag-badges" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;"></div>
+                </div>
+
+                <div class="ratios" style="margin-top:16px;">
+                  <label><input id="show45" type="checkbox" checked /> Nivel AA (4.5:1)</label>
+                  <label><input id="show7"  type="checkbox" checked /> Nivel AAA (7.0:1)</label>
+                </div>
+                <div id="ratioResults" style="margin-top:10px;font-size:13px;"></div>
+              </div>
+
+              <!-- Previews -->
+              <div class="access-previews">
+                <div class="preview-block">
+                  <div class="preview-label">
+                    <span>Texto normal (16px)</span>
+                    <span id="normalPass" class="badge"></span>
+                  </div>
+                  <div id="normalPreview" class="preview">El color y el contraste son herramientas esenciales en el diseño accesible.</div>
+                </div>
+                <div class="preview-block" style="margin-top:12px;">
+                  <div class="preview-label">
+                    <span>Texto grande (18px+)</span>
+                    <span id="largePass" class="badge"></span>
+                  </div>
+                  <div id="largePreview" class="preview large">Diseño para todos.</div>
+                </div>
+
+                <!-- Simulador daltonismo -->
+                <div style="margin-top:20px;">
+                  <h4 style="margin-bottom:10px">Simulador de daltonismo</h4>
+                  <p class="muted small" style="margin-bottom:12px">Así ve esta combinación una persona con cada tipo de visión del color.</p>
+                  <div id="colorblind-grid" class="colorblind-grid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ╔═ TAB: ARMONÍAS ══════════════════════════════════════╗ -->
+          <div id="tab-armonias" class="tab-panel card hidden" style="border-radius:0 0 10px 10px;margin-top:0;">
+            <p class="muted" style="margin-bottom:18px">Combinaciones de color basadas en relaciones armónicas del círculo cromático.</p>
+            <div id="harmonies-grid" class="harmonies-grid"></div>
+          </div>
+
         </section>
       </div>
     </main>
 
-    <!-- Modal 
-    <div id="modal" class="modal hidden" role="dialog" aria-modal="true" style="display:none;">
+    <!-- ══ MODAL EXPORTAR ════════════════════════════════════════════ -->
+    <div id="exportModal" class="modal hidden" role="dialog" aria-modal="true">
       <div class="modal-content card">
         <div class="modal-header">
-          <h3 id="modalTitle">Modal</h3>
-          <button id="closeModal" class="icon-btn" aria-label="Cerrar modal">✕</button>
+          <h3>Exportar paleta</h3>
+          <button id="closeExportModal" class="icon-btn" aria-label="Cerrar">✕</button>
         </div>
-        <div class="modal-body">
-          <div class="modal-notice">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" fill="#f59e0b"></circle>
-            </svg>
-            <div>
-              <h4>Porem ipsum dolor sit ame</h4>
-              <p>Porem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+        <div style="margin-top:12px;">
+          <div class="export-tabs">
+            <button class="export-tab active" data-fmt="css">CSS</button>
+            <button class="export-tab" data-fmt="json">JSON</button>
+            <button class="export-tab" data-fmt="tailwind">Tailwind</button>
+            <button class="export-tab" data-fmt="scss">SCSS</button>
           </div>
-        </div>
-        <div class="modal-actions">
-          <button id="modalBack" class="btn ghost">VOLVER</button>
-          <button id="modalAccept" class="btn" >ACEPTAR</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Accessibility Panel -->
-    <div id="accessPanel" class="overlay hidden" style="display:none;">
-      <div class="access-panel card">
-        <div class="access-header">
-          <div>
-            <h2>Prueba la accesibilidad</h2>
-            <p class="muted">Asegúrate de que tus opciones de color sean lo más accesibles posible.</p>
-          </div>
-          <button id="closeAccess" class="icon-btn" aria-label="Cerrar panel accesibilidad">✕</button>
-        </div>
-
-        <div class="access-body">
-          <div class="field">
-            <label>Color de texto</label>
-            <div class="field-row">
-              <input id="textColorPicker" type="color" class="color-picker" />
-              <input id="textColorInput" type="text" class="text-input" />
-            </div>
-          </div>
-
-          <div class="center">
-            <button id="swapAccess" class="icon-btn" title="Intercambiar color de texto y fondo">⟷</button>
-          </div>
-
-          <div class="field">
-            <label>Color de fondo</label>
-            <div class="field-row">
-              <input id="bgColorPicker" type="color" class="color-picker" />
-              <input id="bgColorInput" type="text" class="text-input" />
-            </div>
-          </div>
-
-          <div class="contrast-previews">
-            <div class="contrast-block">
-              <div class="contrast-row">
-			 <br><br>
-			           <label>Vista previa texto normal 16pt</label>
-                <span id="normalPass" class="badge"></span>
-              </div>
-              <div id="normalPreview" class="preview">Con un alto contraste de color todo es más fácil de leer.</div>
-            </div>
-
-            <div class="contrast-block">
-              <div class="contrast-row">
-                <p></p>
-                <label>Vista previa texto grande 18pt+</label>
-                <span id="largePass" class="badge"></span>
-              </div>
-              <div id="largePreview" class="preview large">Con un alto contraste de color todo es más fácil de leer.</div>
-            </div>
-	<p></p>			
-           <div class="ratios"> 
-              <label><input id="show45" type="checkbox" checked /> Nivel AA (Ratio 4.5)</label>
-              <label><input id="show7" type="checkbox" checked /> Nivel AAA (Ratio 7.0)</label>
-            </div>
- <p></p>
-            <div class="contrast-result">
-              <div class="big-contrast" id="contrastValue">0.00 / 1</div>
-              <div id="ratioResults"></div>
-            </div>
-          </div>
-
-          <div class="right">
-            <button id="closeAccessBtn" class="btn">Cerrar</button>
+          <textarea id="exportOutput" class="export-textarea" readonly></textarea>
+          <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px;">
+            <button id="copyExport" class="btn">📋 Copiar</button>
+            <button id="closeExportModal2" class="btn ghost">Cerrar</button>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
-
-  <!-- Script defensivo para apertura/cierre de modal y panel de accesibilidad -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      function hide(el) {
-        if (!el) return;
-        el.classList.add('hidden');
-        el.style.display = 'none';
-        el.setAttribute('aria-hidden', 'true');
-      }
-      function show(el) {
-        if (!el) return;
-        el.classList.remove('hidden');
-        el.style.display = '';
-        el.removeAttribute('aria-hidden');
-      }
-
-      var modal = document.getElementById('modal');
-      var accessPanel = document.getElementById('accessPanel');
-
-      var btnAccess = document.getElementById('btn-accessibility');
-      var closeAccess = document.getElementById('closeAccess');
-      var closeAccessBtn = document.getElementById('closeAccessBtn');
-
-      var closeModal = document.getElementById('closeModal');
-      var modalBack = document.getElementById('modalBack');
-
-      if (btnAccess) btnAccess.addEventListener('click', function () { show(accessPanel); });
-      if (closeAccess) closeAccess.addEventListener('click', function () { hide(accessPanel); });
-      if (closeAccessBtn) closeAccessBtn.addEventListener('click', function () { hide(accessPanel); });
-
-      if (closeModal) closeModal.addEventListener('click', function () { hide(modal); });
-      if (modalBack) modalBack.addEventListener('click', function () { hide(modal); });
-
-      // también cerramos con Escape
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          hide(modal);
-          hide(accessPanel);
-        }
-      });
-
-      // Si el modal o panel están visibles por defecto, los ocultamos ahora
-      hide(modal);
-      hide(accessPanel);
-    });
-  </script>
+  </div><!-- #app -->
 
   <script src="script.js"></script>
 </body>
